@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - library final</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+  
+  <div class="container">  
+    
+    <div class="dashboard" >
+      <div class="dashboard-image">
+        <img src="https://img.freepik.com/free-vector/gradient-book-logo-with-slogan_23-2148832096.jpg?w=826&t=st=1654060440~exp=1654061040~hmac=8cdaf2d857293e81d3cb14dc8d21ff532ffa9558eb96e94a8e7c26067c4c8855" width="auto" height="180px">
+      </div> 
+      
+      <h3> Add Books To Library </h3>
+      
+      <form class="dashboard-form" id="form1" action="/" method="GET">
+        <div class="form-title">
+            <label for="title">1) Book Title * : </label><br>
+            <input type="text" id="title" name="title" required><br>
+        </div>
+        <div class="form-author">  
+            <label for="author">2) Author *: </label><br>
+            <input type="text" id="author" name="author" required><br>
+        </div>  
+        <div class="form-pages">  
+            <label for="pages">3) Number Of Pages *: </label><br>
+            <input type="tel" id="pages" name="pages" pattern="[0-9]{1,4}" required><br>
+        </div>
+        <div class="form-read">  
+            <p>4) Have You Read It? *:</p>
+            <input type="radio" id="yes" name="read" value="yes" required>
+            <label for="read">Yes</label><br>
+            <input type="radio" id="no" name="read" value="no">
+            <label for="no">No</label><br>
+        </div>
+        <div class="book-image">
+          <label for="bookImage">5) Book Image URL <span>(Optional)</span>:</label>
+<input type="url" id="bookImage" name="bookImage">
+        </div>  
+        
+        <div class="button">
+            <button id="dashboardButton" type="submit" form="form1" value="Submit">Submit A New Book</button>
+        </div>
+      </form>
+    </div>
+    
+    <div class="header">
+      <div class="header-top">
+        <div class="search-column">
+          <label for="search"></label>
+          <input type="search" id="search" name="search" placeholder="Search">
+        </div>
+        
+        <div class="login-properties">
+          <img src="https://frosteer.github.io/project-admin-dashboard/assets/notification.png" width="30px";>
+          <img src="https://frosteer.github.io/project-admin-dashboard/assets/woman.png" width="30px";>
+          <div>Alice Morgan</div>
+        </div>  
+      </div>
+      
+      <div class="header-bottom">
+        <div class="username">
+          <img src="https://frosteer.github.io/project-admin-dashboard/assets/woman.png" width="50px">
+          <div>Hi, Welcome @alicemorgan</div>
+        </div>
+        
+        <div class="login-button">
+          <div>Logout</div>
+          <div>Settings</div>
+          <div>Support</div>
+        </div>  
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="grid-container">
+        
+        <div id="mainCard" class="item">
+          <div class="card-image">
+            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg" width="100%" height="100%"/>
+          </div>
+           
+          <div class="card-title">
+            <div><b>Title:</b><span>The Alchemist</span></div>
+          </div>
+          <div class="card-author">
+            <div><b>Author:</b><span>Paulo Coelho</span></div>
+          </div> 
+          <div class="card-pages">
+            <div><b>Pages:</b><span>163</span></div>
+          </div>  
+          <div class="card-read">
+            <button onclick="toggleRead(event)">Read</button>
+          </div>  
+          <div class="card-edit">
+            <button>Edit</button>
+          </div>
+          <div class="card-delete">
+            <button onclick="toggleDelete(event)">Delete</button>
+          </div> 
+        </div>
+        
+        <div class="item">
+          <div class="card-image">
+            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1466865542l/18144590._SY475_.jpg" width="100%" height="100%"/>
+          </div>
+          <div class="card-title">
+            <div><b>Title:</b><span>The Alchemist</span></div>
+          </div>
+          <div class="card-author">
+            <div><b>Author:</b><span>Paulo Coelho</span></div>
+          </div> 
+          <div class="card-pages">
+            <div><b>Pages:</b><span>163</span></div>
+          </div>  
+          <div class="card-read">
+            <button onclick="toggleRead(event)">Read</button>
+          </div>  
+          <div class="card-edit">
+            <button>Edit</button>
+          </div>
+          <div class="card-delete">
+            <button onclick="toggleDelete(event)">Delete</button>
+          </div> 
+        </div>
+        
+        <div class="item">
+           <div class="card-image">
+            <img src="https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/5440/9780544003415.jpg" width="100%" height="100%"/>
+          </div>
+          <div class="card-title">
+            <div><b>Title:</b><span>The Lord of the Rings</span></div>
+          </div>
+          <div class="card-author">
+            <div><b>Author:</b><span> J.R.R. Tolkien</span></div>
+          </div> 
+          <div class="card-pages">
+            <div><b>Pages:</b><span>1216</span></div>
+          </div>  
+          <div class="card-read">
+            <button onclick="toggleRead(event)">Read</button>
+          </div>  
+          <div class="card-edit">
+            <button>Edit</button>
+          </div>
+          <div class="card-delete">
+            <button onclick="toggleDelete(event)">Delete</button>
+          </div> 
+        </div>
+        
+        <div class="item">
+           <div class="card-image">
+            <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1535115320l/40121378._SY475_.jpg" width="100%" height="100%"/>
+          </div>
+          <div class="card-title">
+            <div><b>Title:</b><span>Atomic Habits</span></div>
+          </div>
+          <div class="card-author">
+            <div><b>Author:</b><span>James Clear</span></div>
+          </div> 
+          <div class="card-pages">
+            <div><b>Pages:</b><span>319</span></div>
+          </div>  
+          <div class="card-read">
+            <button onclick="toggleRead(event)">Read</button>
+          </div>  
+          <div class="card-edit">
+            <button>Edit</button>
+            <div class="card-delete">
+            <button onclick="toggleDelete(event)">Delete</button>
+          </div> 
+          </div>
+        </div>
+        
+      </div>  
+    </div>
+    
+  </div>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+  font-family: 'Open Sans', sans-serif;
+  color: #374151;
+  text-shadow: 0px 1px 1px #94a3b8;
+}
+
+html {
+  min-width: 1160px;
+}
+
+body {
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(230px, 300px) minmax(770px, 1fr);
+  grid-template-rows: 160px minmax(300px, 1fr);
+  min-height: 100vh;
+}
+
+.dashboard-image {
+  display:grid;
+  place-items: center;
+}
+
+.dashboard {
+ grid-row: span 2;
+ box-shadow: 1px 0px 3px 0 rgba(0,0,0,0.2);
+ position: relative;
+  
+}
+
+.dashboard > h3 {
+  padding: 5px 30px 5px 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.dashboard-form {
+  padding: 10px 35px 20px 35px;
+}
+
+label, .form-read > p {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  
+}
+
+form input {
+  margin-top: 3px;
+  margin-bottom: 18px;
+  width: 90%;
+  height: 1.8rem;
+  border-radius: 3px;
+  background: #e0e7ff;
+  padding: 5px 12px;  
+  font-size: 1rem;
+}
+
+input[type="radio"] {
+  width:20px;
+  height: 0.8rem;
+  accent-color:#4f46e5;
+}
+
+.book-image span {
+  font-size: 0.8rem;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  background: #4f46e5;
+  color: white;
+  
+}
+
+.header {
+  padding: 20px 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  box-shadow: 1px 2px 3px 0 rgba(0,0,0,0.2);
+  position: relative;
+  
+}
+
+.header-top, .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  gap: 30px;
+  align-items: center;
+}
+
+.search-column {
+  
+}
+
+input[type="search"] {
+  width: 400px;
+  height: 25px;
+  background: #e0e7ff;
+  border: none;
+  padding: 15px 15px;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 1px 2px 8px 0 rgba(0,0,0,0.2)
+}
+
+.username, .login-properties, .login-button {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  
+}
+
+.login-button div {
+  background: #4f46e5;
+  color: white;
+  padding: 3px 15px;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px 0 rgba(0,0,0,0.2)
+}
+
+.card {
+  background: #E8E8E8;
+  padding: 40px 30px 40px 30px;
+  
+}
+
+.card span{
+  padding: 0px 5px;
+  word-wrap: break-word;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+  justify-items: center;
+  gap: 25px;
+}
+
+.item {
+  width: 270px;
+  height: auto;
+  background: white;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-radius: 8px;
+  position: relative;
+  
+}
+
+.card-image {
+  max-width: 204.766px;
+  max-height:274.766px;
+  flex: 1;
+  align-self: center;
+}
+
+.card span{
+  padding: 0px 5px;
+}
+
+.card-read > button {
+  height: 25px;
+  font-size: .8rem;
+}  
+
+.card-edit > button {
+  height: 25px;
+  font-size: .8rem;
+}
+
+.card-delete > button {
+  height: 23px;
+  font-size: .7rem;
+}
+
+
+[contenteditable = true] {
+   outline: 0px solid transparent;;
+   border-radius: 5px;
+   background-color: #e0e7ff;
+}
